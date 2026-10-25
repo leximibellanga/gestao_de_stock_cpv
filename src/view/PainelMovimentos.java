@@ -8,6 +8,7 @@ import modelo.EstadoProduto;
 import modelo.Movimento;
 import modelo.Produto;
 import modelo.TipoMovimento;
+import util.Estilo;
 
 import javax.swing.BorderFactory;
 import javax.swing.DefaultListCellRenderer;
@@ -133,7 +134,8 @@ public class PainelMovimentos extends JPanel implements Actualizavel {
     }
 
     private void configurarComponentes() {
-        tabela.setRowHeight(24);
+        // tabela.setRowHeight(24);
+        Estilo.estilizarTabela(tabela);
         tabela.getColumnModel().getColumn(0).setMaxWidth(50);
         tabela.getColumnModel().getColumn(1).setPreferredWidth(130);
 

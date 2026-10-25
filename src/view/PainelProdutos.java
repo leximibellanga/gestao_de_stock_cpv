@@ -4,6 +4,7 @@ import dao.ProdutoDAO;
 import excecao.ValidacaoException;
 import modelo.EstadoProduto;
 import modelo.Produto;
+import util.Estilo;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -157,7 +158,8 @@ public class PainelProdutos extends JPanel implements Actualizavel {
 
     private void configurarTabela() {
         tabela.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        tabela.setRowHeight(24);
+        // tabela.setRowHeight(24);
+        Estilo.estilizarTabela(tabela);
         tabela.getColumnModel().getColumn(0).setMaxWidth(50);
 
         // Evento: ao seleccionar uma linha, preenche o formulário

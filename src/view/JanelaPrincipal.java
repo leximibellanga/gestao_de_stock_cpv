@@ -9,7 +9,7 @@ public class JanelaPrincipal extends JFrame {
     public JanelaPrincipal() {
         super("Gestão de Stock");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(1100, 720);
+        setSize(1200, 760);
         setLocationRelativeTo(null);
 
         JTabbedPane abas = new JTabbedPane();

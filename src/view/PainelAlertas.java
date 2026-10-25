@@ -2,6 +2,7 @@ package view;
 
 import dao.ProdutoDAO;
 import modelo.Produto;
+import util.Estilo;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -41,7 +42,8 @@ public class PainelAlertas extends JPanel implements Actualizavel {
         topo.add(btnActualizar);
         topo.add(lblResumo);
 
-        tabela.setRowHeight(24);
+        // tabela.setRowHeight(24);
+        Estilo.estilizarTabela(tabela);
 
         add(topo, BorderLayout.NORTH);
         add(new JScrollPane(tabela), BorderLayout.CENTER);

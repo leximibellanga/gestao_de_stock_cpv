@@ -3,6 +3,8 @@ package view;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
+import util.Estilo;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,7 +13,9 @@ public class Main {
         } catch (Exception e) {
             // se falhar, usa o aspecto padrão do Swing
         }
-        // Swing deve arrancar na Event Dispatch Thread
+        Estilo.aplicarTema(); // depois do Look and Feel
+        
+        // Swing deve arrancar na Event Dispatch Threadcls
         SwingUtilities.invokeLater(() -> new JanelaPrincipal().setVisible(true));
     }
 }

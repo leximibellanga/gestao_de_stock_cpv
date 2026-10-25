@@ -6,6 +6,7 @@ import dao.ProdutoDAO;
 import modelo.Movimento;
 import modelo.Produto;
 import modelo.ResumoStock;
+import util.Estilo;
 
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
@@ -111,7 +112,8 @@ public class PainelDashboard extends JPanel implements Actualizavel {
 
     private JScrollPane criarTabela(String titulo, DefaultTableModel modelo) {
         JTable t = new JTable(modelo);
-        t.setRowHeight(22);
+        Estilo.estilizarTabela(t);
+        // t.setRowHeight(24);
         t.setEnabled(false); // só leitura
         JScrollPane sp = new JScrollPane(t);
         sp.setBorder(BorderFactory.createTitledBorder(titulo));
